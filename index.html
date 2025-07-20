@@ -9,9 +9,10 @@
   <body>
     <script>
       gLH = "";
-      new ResizeObserver(gLHchange).observe($('#googleLogin'));
+      gL = $('#googleLogin');
+      new ResizeObserver(gLHchange).observe(gL);
       function gLHchange() {
-        gLH = $('#googleLogin').height();
+        gLH = gL.height();
         console.log(gLH);
       }
       
