@@ -43,7 +43,11 @@
         //Prompts One Tap
         google.accounts.id.prompt();
       }
-      const gLH = $('#googleLogin').last().css('height');
+      const gLH = function($('#googleLogin').last().css('height')) {
+        console.log(gLH);
+      }
+        
+        $('#googleLogin').last().css('height');
     </script>
     <div id="loginModal" class="modal">
       <div class="modalContent">
