@@ -8,7 +8,11 @@
   </head>
   <body>
     <script>
-      gLH = 0;
+      gLH;
+      $('#googleLogin').on("change",function() {
+        gLH = $('#googleLogin').last().css('height')
+        console.log(gLH);
+      })
       //This occurs when a user logs in. Hides login button. Pair down this function as needed.
       function handleCredentialResponse(response) {
         const responsePayload = decodeJwtResponse(response.credential);
@@ -44,10 +48,6 @@
         //Prompts One Tap
         google.accounts.id.prompt();
       }
-      $('#googleLogin').on("change",function() {
-        gLH = $('#googleLogin').last().css('height')
-        console.log(gLH);
-      })
     </script>
     <div id="loginModal" class="modal">
       <div class="modalContent">
