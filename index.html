@@ -9,10 +9,18 @@
   <body>
     <script>
       gLH = "";
+      new ResizeObserver(gLHchange).observe($('#googleLogin'));
+      gLHchange() {
+        gLH = $('#googleLogin').height();
+        console.log(gLH);
+      }
+      
+      /*
       $('#googleLogin').on('change',function() {
         gLH = $('#googleLogin').height();
         console.log(gLH);
       })
+      */
       //This occurs when a user logs in. Hides login button. Pair down this function as needed.
       function handleCredentialResponse(response) {
         const responsePayload = decodeJwtResponse(response.credential);
