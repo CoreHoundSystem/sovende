@@ -36,13 +36,20 @@
           callback: handleCredentialResponse
         });
         google.accounts.id.renderButton(
-          document.getElementById("buttonDiv"),
+          document.getElementById("googleLogin"),
           { theme: "outline", size: "large" }
         );
         //Prompts One Tap
         google.accounts.id.prompt();
       }
     </script>
-    <div id="buttonDiv"></div>    
+    <div id="loginModal" class="modal">
+      <div id="register"></div>
+      <hr>
+      <div id="login">
+        <div id="sovendeLogin"></div>
+        <div id="googleLogin"></div>
+      </div>
+    </div>
   </body>
 </html>
