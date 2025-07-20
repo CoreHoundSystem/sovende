@@ -6,7 +6,6 @@
     <meta name="google-signin-client_id" content="143101079948-vk875d4tv0q2r77jhjqib03imq8ttsb5.apps.googleusercontent.com">
   </head>
   <body>
-    <div id="signout_button" class="g_id_signout">Sign Out</div>
     <script>
       function handleCredentialResponse(response) {
         const responsePayload = decodeJwtResponse(response.credential);
@@ -38,13 +37,7 @@
         );
         google.accounts.id.prompt(); // also display the One Tap dialog
       }
-      const button = document.getElementById('signout_button');
-      button.onclick = () => {
-        google.accounts.id.disableAutoSelect();
-        google.accounts.id.signOut();
-      }
     </script>
-    <div id="buttonDiv"></div>
-    
+    <div id="buttonDiv"></div>    
   </body>
 </html>
