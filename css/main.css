@@ -67,3 +67,12 @@ hr {
     zoom: 3;
   }
 }
+
+@media screen only and (max-width = 600px) {
+  body {
+    background-size: auto 100%;
+  }
+  .modalContent {
+    zoom: 3;
+  }
+}
