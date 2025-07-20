@@ -1,3 +1,6 @@
+html {
+  container-name: page;
+}
 body {
   background: url('/images/viking1.jpg');
   background-repeat: no-repeat;
@@ -55,7 +58,7 @@ hr {
   color: blanchedalmond;
 }
 
-@container (width < 600px) {
+@container page (width < 600px) {
   body {
     background-size: auto 100%;
   }
