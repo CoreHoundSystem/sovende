@@ -9,7 +9,7 @@
   <body>
     <script>
       gLH = "";
-      gL = '#googleLogin';
+      gL = document.querySelector('#googleLogin');
       new ResizeObserver(gLHchange).observe(gL);
       function gLHchange() {
         gLH = gL.height();
