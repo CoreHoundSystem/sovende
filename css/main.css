@@ -5,8 +5,9 @@ html {
 body {
   background: url('/images/viking1.jpg');
   background-repeat: no-repeat;
-  height: calc(100vh - 16px);
+  height: calc(100vh - 0px);
   background-position: center;
+  margin: 0px;
 }
 hr {
   color: rgba(175,215,255,0.4);
