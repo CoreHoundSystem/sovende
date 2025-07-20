@@ -10,7 +10,7 @@
     <script>
       gLH = "";
       new ResizeObserver(gLHchange).observe($('#googleLogin'));
-      gLHchange() {
+      function gLHchange() {
         gLH = $('#googleLogin').height();
         console.log(gLH);
       }
