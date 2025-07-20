@@ -23,12 +23,7 @@
           { theme: "outline", size: "large" }  // customization attributes
         );
         */
-        //google.accounts.id.prompt(); // also display the One Tap dialog
-        google.accounts.id.prompt((notification) => {
-          if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
-          // try next provider if OneTap is not displayed or skipped
-          }
-        });
+        google.accounts.id.prompt(); // also display the One Tap dialog
       }
 
     </script>
