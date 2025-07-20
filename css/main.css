@@ -55,7 +55,7 @@ hr {
   color: blanchedalmond;
 }
 
-@media and (max-width: 600px) {
+@media (max-width: 600px) {
   body {
     background-size: auto 100%;
   }
