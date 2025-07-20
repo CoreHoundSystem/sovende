@@ -5,6 +5,9 @@
     <script src="https://accounts.google.com/gsi/client" async></script>
     <meta name="google-signin-client_id" content="143101079948-vk875d4tv0q2r77jhjqib03imq8ttsb5.apps.googleusercontent.com">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Meddon&family=MedievalSharp&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Naskh+Arabic:wght@400..700&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans+Imperial+Aramaic&family=Noto+Sans+Medefaidrin:wght@400..700&family=Noto+Sans+Nabataean&family=Noto+Serif+Hebrew:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <script>
@@ -62,11 +65,14 @@
     </script>
     <div id="loginModal" class="modal">
       <div class="modalContent">
-        <div id="register"></div>
+        <div id="register">
+          <div id="sovendeRegister">
+            <div class="loginButton">Register</div>
+        </div>
         <hr>
         <div id="login">
           <div id="sovendeLogin">
-            <div class="loginButton"></div>
+            <div class="loginButton">Login</div>
           </div>
           <div id="googleLogin" onchange="console.log(this.height())"></div>
         </div>
