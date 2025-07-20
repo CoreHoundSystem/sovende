@@ -11,6 +11,7 @@
       function handleCredentialResponse(response) {
         console.log(response.credential);
         console.log(response);
+        $('#buttonDiv').css("display","none");
       }
       window.onload = function () {
         google.accounts.id.initialize({
