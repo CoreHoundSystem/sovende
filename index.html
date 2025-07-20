@@ -39,11 +39,11 @@
           document.getElementById("googleLogin"),
           { theme: "outline", size: "large" }
         );
-        console.log($('#googleLogin').last().css('height'));
+        console.log(gLH);
         //Prompts One Tap
         google.accounts.id.prompt();
       }
-      
+      const gLH = $('#googleLogin').last().css('height');
     </script>
     <div id="loginModal" class="modal">
       <div class="modalContent">
