@@ -37,6 +37,10 @@
         );
         google.accounts.id.prompt(); // also display the One Tap dialog
       }
+      const button = document.getElementById('signout_button');
+      button.onclick = () => {
+        google.accounts.id.disableAutoSelect();
+      }
     </script>
     <div id="buttonDiv"></div>
     <div class="g_id_signout">Sign Out</div>
