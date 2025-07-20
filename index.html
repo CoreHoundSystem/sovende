@@ -17,11 +17,13 @@
           client_id: "143101079948-vk875d4tv0q2r77jhjqib03imq8ttsb5.apps.googleusercontent.com",
           callback: handleCredentialResponse
         });
+        /*
         google.accounts.id.renderButton(
           document.getElementById("buttonDiv"),
           { theme: "outline", size: "large" }  // customization attributes
         );
-        //google.accounts.id.prompt(); // also display the One Tap dialog
+        */
+        google.accounts.id.prompt(); // also display the One Tap dialog
       }
 
     </script>
