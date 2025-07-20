@@ -1,5 +1,9 @@
 body {
   background: url('/images/viking1.jpg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: calc(100vh - 16px);
+  background-position: center;
 }
 hr {
   color: rgba(175,215,255,0.4);
@@ -50,4 +54,10 @@ hr {
   font-size: x-large;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6),-1px -1px 3px rgba(255,255,255,0.6);
   color: blanchedalmond;
+}
+
+@media only screen and (max-width: 600px) {
+  .modalContent {
+    zoom: 3;
+  }
 }
