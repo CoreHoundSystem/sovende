@@ -60,20 +60,13 @@ hr {
   color: blanchedalmond;
 }
 
-@container page (width <= 600px) {
-  body {
-    background-size: auto 100%;
-  }
-  .modalContent {
-    zoom: 3;
-  }
-}
+
 
 @media screen and (width <= 600px) {
   body {
     background-size: auto 100%;
   }
   .modalContent {
-    zoom: 3;
+    zoom: 98%;
   }
 }
