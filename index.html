@@ -9,7 +9,8 @@
     <script>
       //cID = "143101079948-vk875d4tv0q2r77jhjqib03imq8ttsb5.apps.googleusercontent.com";
       function handleCredentialResponse(response) {
-        console.log("Encoded JWT ID token: " + response.credential);
+        console.log(response.credential);
+        console.log(response);
       }
       window.onload = function () {
         google.accounts.id.initialize({
