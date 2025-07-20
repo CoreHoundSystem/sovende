@@ -14,3 +14,7 @@ body {
   border: 1px solid red;
   width: fit-content;;
 }
+.loginButton {
+  border-radius: 4px;
+  cursor: pointer;
+}
