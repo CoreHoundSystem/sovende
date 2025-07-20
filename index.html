@@ -11,21 +11,6 @@
   </head>
   <body>
     <script>
-      gLH = "";
-      /*
-      gL = document.querySelector('#googleLogin');
-      new ResizeObserver(gLHchange).observe(gL);
-      function gLHchange() {
-        gLH = gL.height();
-        console.log(gLH);
-      }
-      
-      
-      $('#googleLogin').on('change',function() {
-        gLH = $('#googleLogin').height();
-        console.log(gLH);
-      })
-      */
       //This occurs when a user logs in. Hides login button. Pair down this function as needed.
       function handleCredentialResponse(response) {
         const responsePayload = decodeJwtResponse(response.credential);
@@ -57,8 +42,6 @@
           document.getElementById("googleLogin"),
           { theme: "outline", size: "large" }
         );
-        
-        console.log(gLH);
         //Prompts One Tap
         google.accounts.id.prompt();
       }
