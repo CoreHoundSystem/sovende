@@ -17,6 +17,7 @@ hr {
   border: 1px solid #444;
   width: fit-content;
   background: rgba(0,0,0,0.4);
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.8),-2px -2px 5px rgba(0,0,0,0.8);
 }
 #title {
   text-align: center;
@@ -26,7 +27,7 @@ hr {
   font-weight: 400;
   font-style: normal;
   text-shadow: 2px 2px 3px rgba(10,30,50,0.8),-2px -2px 3px rgba(10,30,50,0.8);
-  color: blancedalmond;
+  color: blanchedalmond;
 }
 #sovendeRegister > .loginButton {
   background: linear-gradient(#2c6775, #005164, #122a44);
