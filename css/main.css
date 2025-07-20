@@ -1,4 +1,5 @@
 html {
+  container-type: inline-size;
   container-name: page;
 }
 body {
