@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      gLH = 0;
       //This occurs when a user logs in. Hides login button. Pair down this function as needed.
       function handleCredentialResponse(response) {
         const responsePayload = decodeJwtResponse(response.credential);
@@ -43,8 +44,9 @@
         //Prompts One Tap
         google.accounts.id.prompt();
       }
-      const gLH = function($('#googleLogin').last().css('height')) {
-        console.log($('#googleLogin').last().css('height'));
+      $('#googleLogin').on("change",function() {
+        gLH = $('#googleLogin').last().css('height')
+        console.log(gLH);
       }
         
         $('#googleLogin').last().css('height');
