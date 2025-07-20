@@ -38,11 +38,13 @@
         google.accounts.id.renderButton(
           document.getElementById("googleLogin"),
           { theme: "outline", size: "large" }
+          console.log($('#googleLogin').last().css('height'));
         );
+        console.log($('#googleLogin').last().css('height'));
         //Prompts One Tap
         google.accounts.id.prompt();
       }
-      console.log($('#googleLogin').last().css('height'));
+      
     </script>
     <div id="loginModal" class="modal">
       <div class="modalContent">
