@@ -9,6 +9,7 @@
   <body>
     <script>
       gLH = "";
+      /*
       gL = document.querySelector('#googleLogin');
       new ResizeObserver(gLHchange).observe(gL);
       function gLHchange() {
@@ -16,7 +17,7 @@
         console.log(gLH);
       }
       
-      /*
+      
       $('#googleLogin').on('change',function() {
         gLH = $('#googleLogin').height();
         console.log(gLH);
@@ -53,6 +54,7 @@
           document.getElementById("googleLogin"),
           { theme: "outline", size: "large" }
         );
+        
         console.log(gLH);
         //Prompts One Tap
         google.accounts.id.prompt();
@@ -66,7 +68,7 @@
           <div id="sovendeLogin">
             <div class="loginButton"></div>
           </div>
-          <div id="googleLogin"></div>
+          <div id="googleLogin" onchange="console.log(this.height())"></div>
         </div>
       </div>
     </div>
