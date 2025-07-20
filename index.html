@@ -11,12 +11,13 @@
       apiKey = "AIzaSyBMx8943u0B7mdfrEe58kRxjUNSnMTea94";
       channel = "Global"
       $.get(
-        "https://chat.googleapis.com/v1/spaces/create/" + channel + "?key=" + apiKey, {
+        "https://chat.googleapis.com/v1/spaces/create/" + channel + "?key=" + apiKey, 
+        
+        
+      function(data) {
         headers: {
    "Access-Control-Allow-Origin": "*"
  }
-        }
-      function(data) {
         console.log(data);
         console.log(data.values);
       }
