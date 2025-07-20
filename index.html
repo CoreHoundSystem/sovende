@@ -6,6 +6,7 @@
     <meta name="google-signin-client_id" content="143101079948-vk875d4tv0q2r77jhjqib03imq8ttsb5.apps.googleusercontent.com">
   </head>
   <body>
+    <div id="signout_button" class="g_id_signout">Sign Out</div>
     <script>
       function handleCredentialResponse(response) {
         const responsePayload = decodeJwtResponse(response.credential);
@@ -43,6 +44,6 @@
       }
     </script>
     <div id="buttonDiv"></div>
-    <div id="signout_button" class="g_id_signout">Sign Out</div>
+    
   </body>
 </html>
