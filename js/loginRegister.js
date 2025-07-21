@@ -34,7 +34,7 @@ window.onload = function () {
 }
 //sheets
 apiKey = "AIzaSyDNPvEIBIM1edEcICj7AzsiHbEYfMAVji0";
-$('#sovendeRegister').on('click',function() {
+$('#sovendeRegister .loginButton').on('click',function() {
     //check registry for email
         //if there is not match then register
         //if there is a match - post a notification --console.log
@@ -54,14 +54,14 @@ function submitForm(x) {
 }
 
 function getData(x,y,z) {
-$.get(
-    "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
-    function(data) {
-    console.log(data);
-    console.log(findRow('Equity',data));
-    //getData(sIDs[0],sheets[0],getRow(findRow('Equity',data)));
-    //console.log(data.values[2][0]);
-    
-    }
-);
+    $.get(
+        "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
+        function(data) {
+        console.log(data);
+        console.log(findRow('Equity',data));
+        //getData(sIDs[0],sheets[0],getRow(findRow('Equity',data)));
+        //console.log(data.values[2][0]);
+        
+        }
+    );
 }
