@@ -51,7 +51,8 @@ function emailCheck(x) {
     console.log(x[0]);
     e = [];
     e.push($('#eMail').val());
-    console.log(x.includes(e));
+    console.log(x.indexOf(e));
+    console.log(x.indexOf($('#eMail').val()));
 }
 $(document).ready(function() {
     $('#sovendeRegister').find('div:first').on('click',function() {
