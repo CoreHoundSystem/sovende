@@ -40,7 +40,7 @@ $('#sovendeRegister .loginButton').on('click',function() {
         //if there is not match then register
         //if there is a match - post a notification --console.log
     //
-    sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4"
+    sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
     sheet = "Form Responses 1";
     range = "B2:B";
     getData(sID,sheet,range);
