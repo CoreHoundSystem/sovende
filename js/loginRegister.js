@@ -52,7 +52,7 @@ registerForm = ["https://docs.google.com/forms/d/e/1FAIpQLScMj-OSDreel0uUvf8MwCQ
 formResponse
 function submitForm(x) {
     $('#login').append(x);
-})
+}
 
 function getData(x,y,z) {
 $.get(
