@@ -48,11 +48,18 @@ function getData(x,y,z,c) {
     );
 }
 function emailCheck(x) {
-    console.log(x[0]);
+    a = [];
+    while(i=0;i<x;i++) {
+        a.push(x[i][0]);
+        console.log(a);
+    }
+    console.log(a);
+    /*console.log(x[0]);
     e = [];
     e.push($('#eMail').val());
     console.log(x.indexOf(e));
     console.log(x.indexOf($('#eMail').val()));
+    */
 }
 $(document).ready(function() {
     $('#sovendeRegister').find('div:first').on('click',function() {
