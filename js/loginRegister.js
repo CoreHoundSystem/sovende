@@ -35,6 +35,7 @@ window.onload = function () {
 //sheets
 apiKey = "AIzaSyDNPvEIBIM1edEcICj7AzsiHbEYfMAVji0";
 $('#sovendeRegister .loginButton').on('click',function() {
+    console.log("Clicky");
     //check registry for email
         //if there is not match then register
         //if there is a match - post a notification --console.log
