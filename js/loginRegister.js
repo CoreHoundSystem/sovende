@@ -41,7 +41,7 @@ function getData(x,y,z,c) {
         "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
         function(data) {
         console.log(data);
-        console.log(data.values);
+        console.log(data.values[0]);
         c(data.values);
         }
     );
