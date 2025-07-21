@@ -44,9 +44,9 @@ function getData(x,y,z) {
         console.log(data.values);
         //getData(sIDs[0],sheets[0],getRow(findRow('Equity',data)));
         //console.log(data.values[2][0]);
-        return data
         }
     );
+    return data
 }
 
 $(document).ready(function() {
