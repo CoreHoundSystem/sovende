@@ -40,7 +40,7 @@ hr {
 #userInput {
   width: min-content;
 }
-#userInput > input {
+#userInput input {
   width: 219px;
 }
 #sovendeRegister > .loginButton {
