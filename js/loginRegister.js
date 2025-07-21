@@ -32,3 +32,37 @@ window.onload = function () {
     //Prompts One Tap
     google.accounts.id.prompt();
 }
+//sheets
+apiKey = "AIzaSyDNPvEIBIM1edEcICj7AzsiHbEYfMAVji0";
+$('#sovendeRegister').on('click',function() {
+    //check registry for email
+        //if there is not match then register
+        //if there is a match - post a notification --console.log
+    //
+    sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4"
+    sheet = "Form Responses 1";
+    range = "B2:B";
+    getData(sID,sheet,range);
+    //$('#email').val();
+    //$('#password').val();
+    //registerAcct
+    //submitForm();
+});
+registerForm = ["https://docs.google.com/forms/d/e/1FAIpQLScMj-OSDreel0uUvf8MwCQxdbMKUExrgXb7Ew3vkWmJzTqsYg/formResponse?usp=pp_url","&entry.1302031357=","&entry.2038887219="];
+formResponse
+function submitForm(x) {
+    $('#login').append(x);
+})
+
+function getData(x,y,z) {
+$.get(
+    "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
+    function(data) {
+    console.log(data);
+    console.log(findRow('Equity',data));
+    //getData(sIDs[0],sheets[0],getRow(findRow('Equity',data)));
+    //console.log(data.values[2][0]);
+    
+    }
+);
+}
