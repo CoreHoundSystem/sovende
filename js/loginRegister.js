@@ -41,7 +41,7 @@ function getData(x,y,z,c) {
         "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
         function(data) {
         console.log(data);
-        console.log($('#email').val());
+        console.log($('#eMail').val());
         console.log(data.values[0]);
         c(data.values);
         }
@@ -49,7 +49,7 @@ function getData(x,y,z,c) {
 }
 function emailCheck(x) {
     console.log(x.values);
-    console.log(x.includes($('#email').val()));
+    console.log(x.includes($('#eMail').val()));
 }
 $(document).ready(function() {
     $('#sovendeRegister').find('div:first').on('click',function() {
@@ -58,7 +58,7 @@ $(document).ready(function() {
             //if there is not match then register
             //if there is a match - post a notification --console.log
         //
-        if(!$('#email').val() || !$('#password').val()) {
+        if(!$('#eMail').val() || !$('#pWord').val()) {
             //one or both are empty
         } else {
             sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
@@ -69,8 +69,8 @@ $(document).ready(function() {
         }
         
         
-        //$('#email').val();
-        //$('#password').val();
+        //$('#eMail').val();
+        //$('#pWord').val();
         //registerAcct
         //submitForm();
     });
