@@ -34,21 +34,23 @@ window.onload = function () {
 }
 //sheets
 apiKey = "AIzaSyDNPvEIBIM1edEcICj7AzsiHbEYfMAVji0";
-$('#sovendeRegister').find('div:first').on('click',function() {
-    console.log("Clicky");
-    //check registry for email
-        //if there is not match then register
-        //if there is a match - post a notification --console.log
-    //
-    sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
-    sheet = "Form Responses 1";
-    range = "B2:B";
-    getData(sID,sheet,range);
-    //$('#email').val();
-    //$('#password').val();
-    //registerAcct
-    //submitForm();
-});
+$(document).ready(function() {
+    $('#sovendeRegister').find('div:first').on('click',function() {
+        console.log("Clicky");
+        //check registry for email
+            //if there is not match then register
+            //if there is a match - post a notification --console.log
+        //
+        sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
+        sheet = "Form Responses 1";
+        range = "B2:B";
+        getData(sID,sheet,range);
+        //$('#email').val();
+        //$('#password').val();
+        //registerAcct
+        //submitForm();
+    });
+})
 $(function() {
     console.log("Clicky");
     //check registry for email
