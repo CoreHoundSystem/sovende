@@ -49,7 +49,7 @@ $(document).ready(function() {
             sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
             sheet = "Form Responses 1";
             range = "B2:B";
-            getData(sID,sheet,range);
+            emails = getData(sID,sheet,range);
         }
         
         
@@ -74,7 +74,7 @@ function getData(x,y,z) {
         console.log(data.values);
         //getData(sIDs[0],sheets[0],getRow(findRow('Equity',data)));
         //console.log(data.values[2][0]);
-        
+        return data
         }
     );
 }
