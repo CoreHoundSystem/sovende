@@ -71,7 +71,7 @@ function getData(x,y,z) {
         "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
         function(data) {
         console.log(data);
-        console.log(Object.keys(data));
+        console.log(data.values);
         //getData(sIDs[0],sheets[0],getRow(findRow('Equity',data)));
         //console.log(data.values[2][0]);
         
