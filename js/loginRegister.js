@@ -36,21 +36,19 @@ window.onload = function () {
 apiKey = "AIzaSyDNPvEIBIM1edEcICj7AzsiHbEYfMAVji0";
 registerForm = ["https://docs.google.com/forms/d/e/1FAIpQLScMj-OSDreel0uUvf8MwCQxdbMKUExrgXb7Ew3vkWmJzTqsYg/formResponse?usp=pp_url","&entry.1302031357=","&entry.2038887219="];
 
-function getData(x,y,z) {
-    values = [];
+function getData(x,y,z,c) {
     $.get(
         "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
         function(data) {
         console.log(data);
         console.log(data.values);
-        //getData(sIDs[0],sheets[0],getRow(findRow('Equity',data)));
-        //console.log(data.values[2][0]);
-        values = data;
+        c(data);
         }
     );
-    return values
 }
-
+function emailCheck(x) {
+    console.log(c.values);
+}
 $(document).ready(function() {
     $('#sovendeRegister').find('div:first').on('click',function() {
         console.log("Clicky");
@@ -64,7 +62,7 @@ $(document).ready(function() {
             sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
             sheet = "Form Responses 1";
             range = "B2:B";
-            emails = getData(sID,sheet,range);
+            emails = getData(sID,sheet,range,emailCheck);
             console.log("Emails " + emails);
         }
         
