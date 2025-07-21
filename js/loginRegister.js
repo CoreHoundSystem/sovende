@@ -42,7 +42,7 @@ function getData(x,y,z,c) {
         function(data) {
         console.log(data);
         console.log($('#eMail').val());
-        console.log(data.values[0][0]);
+        console.log(data.values[1][0]);
         c(data.values);
         }
     );
