@@ -49,7 +49,8 @@ function getData(x,y,z,c) {
 }
 function emailCheck(x) {
     console.log(x[0]);
-    e = $('#eMail').val();
+    e = [];
+    e.push($('#eMail').val());
     console.log(x.includes(e));
 }
 $(document).ready(function() {
