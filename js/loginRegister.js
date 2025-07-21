@@ -49,7 +49,7 @@ function getData(x,y,z,c) {
 }
 function emailCheck(x) {
     a = [];
-    for(i=0;i<x;i++) {
+    for(i=0;i<x.length;i++) {
         a.push(x[i][0]);
         console.log(a);
     }
