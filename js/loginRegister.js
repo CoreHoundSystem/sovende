@@ -34,6 +34,8 @@ window.onload = function () {
 }
 //sheets
 apiKey = "AIzaSyDNPvEIBIM1edEcICj7AzsiHbEYfMAVji0";
+registerForm = ["https://docs.google.com/forms/d/e/1FAIpQLScMj-OSDreel0uUvf8MwCQxdbMKUExrgXb7Ew3vkWmJzTqsYg/formResponse?usp=pp_url","&entry.1302031357=","&entry.2038887219="];
+
 $(document).ready(function() {
     $('#sovendeRegister').find('div:first').on('click',function() {
         console.log("Clicky");
@@ -41,36 +43,29 @@ $(document).ready(function() {
             //if there is not match then register
             //if there is a match - post a notification --console.log
         //
-        sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
-        sheet = "Form Responses 1";
-        range = "B2:B";
-        getData(sID,sheet,range);
+        if(!$('#email').val() || !$('#password').val()) {
+            //one or both are empty
+        } else {
+            sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
+            sheet = "Form Responses 1";
+            range = "B2:B";
+            getData(sID,sheet,range);
+        }
+        
+        
         //$('#email').val();
         //$('#password').val();
         //registerAcct
         //submitForm();
     });
 })
-$(function() {
-    console.log("Clicky");
-    //check registry for email
-        //if there is not match then register
-        //if there is a match - post a notification --console.log
-    //
-    sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
-    sheet = "Form Responses 1";
-    range = "B2:B";
-    getData(sID,sheet,range);
-    //$('#email').val();
-    //$('#password').val();
-    //registerAcct
-    //submitForm();
-});
-registerForm = ["https://docs.google.com/forms/d/e/1FAIpQLScMj-OSDreel0uUvf8MwCQxdbMKUExrgXb7Ew3vkWmJzTqsYg/formResponse?usp=pp_url","&entry.1302031357=","&entry.2038887219="];
 function submitForm(x) {
-    $('#login').append(x);
+    $('body').append('<iframe src="' + x + '" style="display:none;"></iframe>');
+    setTimeout(deleteIFraqme(), 10000);
 }
-
+function deleteIFrame() {
+    $('#body').find('iFrame:first').remove();
+}
 function getData(x,y,z) {
     $.get(
         "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
