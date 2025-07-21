@@ -48,6 +48,7 @@ function getData(x,y,z,c) {
 }
 function emailCheck(x) {
     console.log(x.values);
+    console.log(x.includes($('#email').val()));
 }
 $(document).ready(function() {
     $('#sovendeRegister').find('div:first').on('click',function() {
