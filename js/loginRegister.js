@@ -53,10 +53,9 @@ function emailCheck(x) {
         a.push(x[i][0]);
         console.log(a);
     }
-    console.log(a);
-    console.log(a.includes([$('#eMail').val()]));
-    console.log(a.includes($('#eMail').val()));
-    a.includes($('#eMail').val());
+    if(a.includes($('#eMail').val())) {
+        console.log("Submit Next");
+    }
     /*console.log(x[0]);
     e = [];
     e.push($('#eMail').val());
