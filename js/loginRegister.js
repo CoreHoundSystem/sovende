@@ -37,7 +37,7 @@ apiKey = "AIzaSyDNPvEIBIM1edEcICj7AzsiHbEYfMAVji0";
 registerForm = ["https://docs.google.com/forms/d/e/1FAIpQLScMj-OSDreel0uUvf8MwCQxdbMKUExrgXb7Ew3vkWmJzTqsYg/formResponse?usp=pp_url","&entry.1302031357=","&entry.2038887219="];
 
 function getData(x,y,z) {
-    values;
+    values = '';
     $.get(
         "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
         function(data) {
