@@ -42,7 +42,7 @@ function getData(x,y,z,c) {
         function(data) {
         console.log(data);
         console.log(data.values);
-        c(data);
+        c(data.values);
         }
     );
 }
