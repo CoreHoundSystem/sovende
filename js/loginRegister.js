@@ -47,7 +47,7 @@ function getData(x,y,z,c) {
     );
 }
 function emailCheck(x) {
-    console.log(c.values);
+    console.log(x.values);
 }
 $(document).ready(function() {
     $('#sovendeRegister').find('div:first').on('click',function() {
