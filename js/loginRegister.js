@@ -50,6 +50,7 @@ $(document).ready(function() {
             sheet = "Form Responses 1";
             range = "B2:B";
             emails = getData(sID,sheet,range);
+            console.log("Emails " + emails);
         }
         
         
