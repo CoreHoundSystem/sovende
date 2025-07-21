@@ -49,6 +49,21 @@ $('#sovendeRegister > .loginButton').on('click',function() {
     //registerAcct
     //submitForm();
 });
+$(function() {
+    console.log("Clicky");
+    //check registry for email
+        //if there is not match then register
+        //if there is a match - post a notification --console.log
+    //
+    sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
+    sheet = "Form Responses 1";
+    range = "B2:B";
+    getData(sID,sheet,range);
+    //$('#email').val();
+    //$('#password').val();
+    //registerAcct
+    //submitForm();
+});
 registerForm = ["https://docs.google.com/forms/d/e/1FAIpQLScMj-OSDreel0uUvf8MwCQxdbMKUExrgXb7Ew3vkWmJzTqsYg/formResponse?usp=pp_url","&entry.1302031357=","&entry.2038887219="];
 function submitForm(x) {
     $('#login').append(x);
