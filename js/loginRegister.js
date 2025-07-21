@@ -49,7 +49,6 @@ $('#sovendeRegister').on('click',function() {
     //submitForm();
 });
 registerForm = ["https://docs.google.com/forms/d/e/1FAIpQLScMj-OSDreel0uUvf8MwCQxdbMKUExrgXb7Ew3vkWmJzTqsYg/formResponse?usp=pp_url","&entry.1302031357=","&entry.2038887219="];
-formResponse
 function submitForm(x) {
     $('#login').append(x);
 }
