@@ -54,6 +54,9 @@ function emailCheck(x) {
         console.log(a);
     }
     console.log(a);
+    console.log(a.includes([$('#eMail').val()]));
+    console.log(a.includes($('#eMail').val()));
+    a.includes($('#eMail').val());
     /*console.log(x[0]);
     e = [];
     e.push($('#eMail').val());
@@ -75,7 +78,6 @@ $(document).ready(function() {
             sheet = "Form Responses 1";
             range = "B2:B";
             emails = getData(sID,sheet,range,emailCheck);
-            console.log("Emails " + emails);
         }
         
         
