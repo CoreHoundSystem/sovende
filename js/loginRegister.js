@@ -40,9 +40,8 @@ function getData(x,y,z,c) {
     $.get(
         "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
         function(data) {
-        console.log(data);
+        console.log(data);//
         console.log($('#eMail').val());
-        console.log(data.values[1][0]);
         c(data.values);
         }
     );
@@ -54,7 +53,11 @@ function emailCheck(x) {
         console.log(a);
     }
     if(a.includes($('#eMail').val())) {
-        console.log("Submit Next");
+        console.log("Submit Next");//
+        $('#registerNotice').css('display','block');
+    } else {
+        f = registerForm[0] + encodeURI($('#eMail').val()) + registerForm[1] + encodeURI($('#pWord').val()) + registerForm[2];
+        submitForm(f);
     }
     /*console.log(x[0]);
     e = [];
@@ -65,11 +68,9 @@ function emailCheck(x) {
 }
 $(document).ready(function() {
     $('#sovendeRegister').find('div:first').on('click',function() {
-        console.log("Clicky");
-        //check registry for email
-            //if there is not match then register
-            //if there is a match - post a notification --console.log
-        //
+        console.log("Clicky");//
+        $('#loginNotice').css('display','none');
+        $('#registerNotice').css('display','none');
         if(!$('#eMail').val() || !$('#pWord').val()) {
             //one or both are empty
         } else {
@@ -78,12 +79,6 @@ $(document).ready(function() {
             range = "B2:B";
             emails = getData(sID,sheet,range,emailCheck);
         }
-        
-        
-        //$('#eMail').val();
-        //$('#pWord').val();
-        //registerAcct
-        //submitForm();
     });
 })
 function submitForm(x) {
