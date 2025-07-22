@@ -74,7 +74,7 @@ $(document).ready(function() {
         if(!$('#eMail').val() || !$('#pWord').val()) {
             //one or both are empty
         } else {
-            sID = "1OCBNwHb6TCFHcS1WSmlS1OrKmqQwJRpYe1XjtgrTiW4";
+            sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
             sheet = "Form Responses 1";
             range = "B2:B";
             emails = getData(sID,sheet,range,emailCheck);
@@ -83,7 +83,7 @@ $(document).ready(function() {
 })
 function submitForm(x) {
     $('body').append('<iframe src="' + x + '" style="display:none;"></iframe>');
-    setTimeout(deleteIFraqme(), 10000);
+    setTimeout(deleteIFrame(), 10000);
 }
 function deleteIFrame() {
     $('#body').find('iFrame:first').remove();
