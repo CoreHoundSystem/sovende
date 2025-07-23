@@ -52,7 +52,7 @@ function emailCheck(x) {
         a.push(x[i][0]);
         console.log(a);
     }
-    if(a.includes($('#eMail').val())) {
+    if(a.includes($('#eMail').val()) || a == []) {
         console.log("Submit Next");//
         $('#registerNotice').css('display','block');
     } else {
