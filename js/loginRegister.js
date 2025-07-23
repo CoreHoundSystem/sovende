@@ -56,9 +56,35 @@ function deleteIFrame() {
     $('#body').find('iFrame:first').remove();
 }
 
+$(document).ready(function() {
+    //check announcements
+    //check version and copyright
+    $('#sovendeRegister').find('div:first').on('click',function() {
+        console.log("Clicky");//
+        $('#loginNotice').css('display','none');
+        $('#registerNotice').css('display','none');
+        if(!$('#eMail').val() || $('#pWord').val().length < 8 || !$('#pWord').val()) {
+            //one or both are empty or password too short
+        } else {
+            sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
+            sheet = "Form Responses 1";
+            range = "B2:B";
+            emails = getData(sID,sheet,range,emailCheck);
+        }
+    });
+    //assign login button
+    $('#sovendeLogin').find('div:first').on('click',function() {
+        console.log("Click " + this);
+    });
+})
+
+
+
+
+
 function emailCheck(x) {
     console.log(x);
-    f = registerForm[0] + encodeURI($('#eMail').val()) + registerForm[1] + encodeURI($('#pWord').val()) + registerForm[2];
+    f = registerForm[0] +  registerForm[1] + encodeURI($('#eMail').val()) + registerForm[2] + encodeURI($('#pWord').val());
     if(x !== undefined) {
         a = [];
         for(i=0;i<x.length;i++) {
@@ -70,27 +96,11 @@ function emailCheck(x) {
             $('#registerNotice').css('display','block');
         } else {
             submitForm(f);
+            $('#sovendeLogin').find('div:first').trigger('click');
         }
     } else {
         submitForm(f);
+        $('#sovendeLogin').find('div:first').trigger('click');
     }
 }
-$(document).ready(function() {
-    //check announcements
-    //check version and copyright
-    $('#sovendeRegister').find('div:first').on('click',function() {
-        console.log("Clicky");//
-        $('#loginNotice').css('display','none');
-        $('#registerNotice').css('display','none');
-        if(!$('#eMail').val() || !$('#pWord').val()) {
-            //one or both are empty
-        } else {
-            sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
-            sheet = "Form Responses 1";
-            range = "B2:B";
-            emails = getData(sID,sheet,range,emailCheck);
-        }
-    });
-    //assign login button
-})
 
