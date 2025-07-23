@@ -9,6 +9,7 @@ function handleCredentialResponse(response) {
     console.log("Email: " + responsePayload.email);
     console.log(response);
     $('#loginModal').css("display","none");
+    //determine if login or register
 }
 //Allows for decoding above function
 function decodeJwtResponse(token) {
@@ -47,26 +48,26 @@ function getData(x,y,z,c) {
     );
 }
 function emailCheck(x) {
-    a = [];
-    for(i=0;i<x.length;i++) {
-        a.push(x[i][0]);
-        console.log(a);
-    }
-    if(a.includes($('#eMail').val()) || a == []) {
-        console.log("Submit Next");//
-        $('#registerNotice').css('display','block');
+    f = registerForm[0] + encodeURI($('#eMail').val()) + registerForm[1] + encodeURI($('#pWord').val()) + registerForm[2];
+    if(x.length <> 0) {
+        a = [];
+        for(i=0;i<x.length;i++) {
+            a.push(x[i][0]);
+            console.log(a);
+        }
+        if(a.includes($('#eMail').val())) {
+            console.log("Match found - email attached to account");//
+            $('#registerNotice').css('display','block');
+        } else {
+            submitForm(f);
+        }
     } else {
-        f = registerForm[0] + encodeURI($('#eMail').val()) + registerForm[1] + encodeURI($('#pWord').val()) + registerForm[2];
         submitForm(f);
     }
-    /*console.log(x[0]);
-    e = [];
-    e.push($('#eMail').val());
-    console.log(x.indexOf(e));
-    console.log(x.indexOf($('#eMail').val()));
-    */
 }
 $(document).ready(function() {
+    //check announcements
+    //check version and copyright
     $('#sovendeRegister').find('div:first').on('click',function() {
         console.log("Clicky");//
         $('#loginNotice').css('display','none');
@@ -80,6 +81,7 @@ $(document).ready(function() {
             emails = getData(sID,sheet,range,emailCheck);
         }
     });
+    //assign login button
 })
 function submitForm(x) {
     $('body').append('<iframe src="' + x + '" style="display:none;"></iframe>');
