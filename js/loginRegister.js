@@ -37,6 +37,7 @@ window.onload = function () {
 apiKey = "AIzaSyDNPvEIBIM1edEcICj7AzsiHbEYfMAVji0";
 registerForm = ["https://docs.google.com/forms/d/e/1FAIpQLScMj-OSDreel0uUvf8MwCQxdbMKUExrgXb7Ew3vkWmJzTqsYg/formResponse?usp=pp_url","&entry.1302031357=","&entry.2038887219="];
 
+//reusable functions
 function getData(x,y,z,c) {
     $.get(
         "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
@@ -47,7 +48,16 @@ function getData(x,y,z,c) {
         }
     );
 }
+function submitForm(x) {
+    $('body').append('<iframe src="' + x + '" style="display:none;"></iframe>');
+    setTimeout(deleteIFrame(), 10000);
+}
+function deleteIFrame() {
+    $('#body').find('iFrame:first').remove();
+}
+
 function emailCheck(x) {
+    console.log(x);
     f = registerForm[0] + encodeURI($('#eMail').val()) + registerForm[1] + encodeURI($('#pWord').val()) + registerForm[2];
     if(x.length != 0) {
         a = [];
@@ -83,11 +93,4 @@ $(document).ready(function() {
     });
     //assign login button
 })
-function submitForm(x) {
-    $('body').append('<iframe src="' + x + '" style="display:none;"></iframe>');
-    setTimeout(deleteIFrame(), 10000);
-}
-function deleteIFrame() {
-    $('#body').find('iFrame:first').remove();
-}
 
