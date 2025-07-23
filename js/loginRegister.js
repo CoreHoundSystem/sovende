@@ -59,7 +59,7 @@ function deleteIFrame() {
 function emailCheck(x) {
     console.log(x);
     f = registerForm[0] + encodeURI($('#eMail').val()) + registerForm[1] + encodeURI($('#pWord').val()) + registerForm[2];
-    if(x.length != 0) {
+    if(x !== undefined) {
         a = [];
         for(i=0;i<x.length;i++) {
             a.push(x[i][0]);
