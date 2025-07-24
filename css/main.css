@@ -26,10 +26,18 @@ hr {
   color: blanchedalmond;
   text-shadow: 0px 0px 3px darkblue;
 }
-#sovendeAnnouncements {
+#sovendeAnnouncements img {
   position: fixed;
   bottom: 20px;
-  filter: drop-shadow(26px 26px 26px rgba(255,60,125,0.8));
+  right: 40px;
+  animation: announcements 7s infinite;
+  zoom: 15%;
+}
+@keyframes announcements {
+  50% {
+    -webkit-filter: drop-shadow(10px 10px 10px rgba(255,60,125,0.2)) drop-shadow(-10px -10px 10px rgba(255,60,125,0.2)) drop-shadow(10px -10px 10px rgba(255,60,125,0.2)) drop-shadow(-10px 10px 10px rgba(255,60,125,0.2)); 
+    filter: drop-shadow(10px 10px 10px rgba(255,60,125,0.2)) drop-shadow(-10px -10px 10px rgba(255,60,125,0.2)) drop-shadow(10px -10px 10px rgba(255,60,125,0.2)) drop-shadow(-10px 10px 10px rgba(255,60,125,0.2));
+  }
 }
 .modal {
   position: fixed;
