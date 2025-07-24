@@ -60,17 +60,7 @@ $(document).ready(function() {
     //check announcements
     //check version and copyright
     $('#sovendeRegister').find('div:first').on('click',function() {
-        console.log("Clicky");//
-        $('#loginNotice').css('display','none');
-        $('#registerNotice').css('display','none');
-        if(!$('#eMail').val() || $('#pWord').val().length < 8 || !$('#pWord').val()) {
-            //one or both are empty or password too short
-        } else {
-            sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
-            sheet = "Form Responses 1";
-            range = "B2:B";
-            emails = getData(sID,sheet,range,emailCheck);
-        }
+        sovendeRegister(this);
     });
     //assign login button
     $('#sovendeLogin').find('div:first').on('click',function() {
@@ -78,6 +68,19 @@ $(document).ready(function() {
     });
 })
 
+function sovendeRegister() {
+    console.log("Clicky");//
+    $('#loginNotice').css('display','none');
+    $('#registerNotice').css('display','none');
+    if(!$('#eMail').val() || $('#pWord').val().length < 8 || !$('#pWord').val()) {
+        //one or both are empty or password too short
+    } else {
+        sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
+        sheet = "Form Responses 1";
+        range = "B2:B";
+        emails = getData(sID,sheet,range,emailCheck);
+    }
+}
 
 
 
