@@ -73,11 +73,11 @@ function validateInputs(c) {
     $('#registerNotice').css('display','none');
     e = '';
     p = '';
-    if(!$('#eMail').val() || $('#eMail').val().length > 5 || $('#eMail').val().length < 321 || $('#eMail').val().indexOf('@') != -1 || $('#eMail').val().indexOf('.') != -1) {
+    if(!$('#eMail').val() || $('#eMail').val().length < 6 || $('#eMail').val().length > 320 || $('#eMail').val().indexOf('@') != -1 || $('#eMail').val().indexOf('.') != -1) {
         e = false;
         //invalid email format
     }
-    if(!$('#pWord').val() || $('#pWord').val().length < 21 || $('#pWord').val().length > 7) {
+    if(!$('#pWord').val() || $('#pWord').val().length > 20 || $('#pWord').val().length < 8) {
         p = false;
         //invalid password - must be between 8 and 20 characters
     }
