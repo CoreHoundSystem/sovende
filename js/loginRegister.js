@@ -74,11 +74,11 @@ function validateInputs(c) {
     e = '';
     p = '';
     if(!$('#eMail').val() || $('#eMail').val().length > 5 || $('#eMail').val().length < 321 || $('#eMail').val().indexOf('@') != -1 || $('#eMail').val().indexOf('.') != -1) {
-        e = FALSE;
+        e = false;
         //invalid email format
     }
     if(!$('#pWord').val() || $('#pWord').val().length < 21 || $('#pWord').val().length > 7) {
-        p = FALSE;
+        p = false;
         //invalid password - must be between 8 and 20 characters
     }
     if(e && p) {
