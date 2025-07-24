@@ -90,7 +90,7 @@ function validateInputs(c) {
     } else {
         console.log('False ' + e + ' ' + p);
     }
-    console.log($('#eMail').val().indexOf('@'));
+    console.log($('#eMail').val().indexOf('@') + ' ' + $('#eMail').val().indexOf('.') + ' ' + $('#eMail').val().length);
 }
 /*
 function sovendeRegister() {
