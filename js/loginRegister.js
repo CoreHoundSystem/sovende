@@ -60,19 +60,43 @@ $(document).ready(function() {
     //check announcements
     //check version and copyright
     $('#sovendeRegister').find('div:first').on('click',function() {
-        sovendeRegister(this);
+        validateInputs(sovendeRegister); 
     });
     //assign login button
     $('#sovendeLogin').find('div:first').on('click',function() {
-        console.log("Click " + this);
+        validateInputs(sovendeLogin);
     });
 })
 
-function sovendeRegister() {
-    console.log("Clicky");//
+function validateInputs(c) {
     $('#loginNotice').css('display','none');
     $('#registerNotice').css('display','none');
-    if(!$('#eMail').val() || $('#pWord').val().length < 8 || !$('#pWord').val()) {
+    e = '';
+    p = '';
+    if(!$('#eMail').val() || $('#eMail').val().length > 5 || $('#eMail').val().length < 321 || $('#eMail').val().indexOf('@') != -1 || $('#eMail').val().indexOf('.') != -1) {
+        e = FALSE;
+        //invalid email format
+    }
+    if(!$('#pWord').val() || $('#pWord').val().length < 21 || $('#pWord').val().length > 7) {
+        p = FALSE;
+        //invalid password - must be between 8 and 20 characters
+    }
+    if(e && p) {
+        console.log('True ' + e + ' ' + p);
+        sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
+        sheet = "Form Responses 1";
+        range = "B2:B";
+        emails = getData(sID,sheet,range,emailCheck);
+    } else {
+        console.log('False ' + e + ' ' + p);
+    }
+}
+/*
+function sovendeRegister() {
+    console.log("Clicky");//
+    if(!$('#eMail').val() || $('#eMail').val().length > 5 || $('#eMail').val().length < 321 || $('#eMail').val().indexOf('@') != -1 || $('#eMail').val().indexOf('.') != -1
+        
+        || !$('#pWord').val() || $('#pWord').val().length < 21 || $('#pWord').val().length > 7) {
         //one or both are empty or password too short
     } else {
         sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
@@ -81,8 +105,10 @@ function sovendeRegister() {
         emails = getData(sID,sheet,range,emailCheck);
     }
 }
+function sovendeLogin(x) {
 
-
+}
+*/
 
 
 function emailCheck(x) {
