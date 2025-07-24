@@ -71,8 +71,8 @@ $(document).ready(function() {
 function validateInputs(c) {
     $('#loginNotice').css('display','none');
     $('#registerNotice').css('display','none');
-    e = '';
-    p = '';
+    e = true;
+    p = true;
     if(!$('#eMail').val() || $('#eMail').val().length < 6 || $('#eMail').val().length > 320 || $('#eMail').val().indexOf('@') != -1 || $('#eMail').val().indexOf('.') != -1) {
         e = false;
         //invalid email format
