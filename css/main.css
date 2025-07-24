@@ -26,6 +26,11 @@ hr {
   color: blanchedalmond;
   text-shadow: 0px 0px 3px darkblue;
 }
+#sovendeAnnouncements {
+  position: fixed;
+  bottom: 20px;
+  filter: drop-shadow(26px 26px 26px rgba(255,60,125,0.8));
+}
 .modal {
   position: fixed;
   left: 0px;
