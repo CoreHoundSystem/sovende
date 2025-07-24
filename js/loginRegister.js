@@ -73,7 +73,7 @@ function validateInputs(c) {
     $('#registerNotice').css('display','none');
     e = true;
     p = true;
-    if(!$('#eMail').val() || $('#eMail').val().length < 6 || $('#eMail').val().length > 320 || $('#eMail').val().indexOf('@') != -1 || $('#eMail').val().indexOf('.') != -1) {
+    if(!$('#eMail').val() || $('#eMail').val().length < 6 || $('#eMail').val().length > 320 || $('#eMail').val().indexOf('@') == -1 || $('#eMail').val().indexOf('.') == -1) {
         e = false;
         //invalid email format
     }
