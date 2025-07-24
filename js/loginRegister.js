@@ -90,6 +90,7 @@ function validateInputs(c) {
     } else {
         console.log('False ' + e + ' ' + p);
     }
+    console.log($('#eMail').val().indexOf('@'));
 }
 /*
 function sovendeRegister() {
