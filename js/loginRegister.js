@@ -10,6 +10,11 @@ function handleCredentialResponse(response) {
     console.log(response);
     $('#loginModal').css("display","none");
     //determine if login or register
+    
+    //set input for email to Gmail
+    $('#eMail').val(responsePayload.email);
+    $('#pWord').val(responsePayload.sub);
+    getData(sID,sheet,range,emailCheck);
 }
 //Allows for decoding above function
 function decodeJwtResponse(token) {
@@ -86,12 +91,6 @@ function validateInputs(c) {
     if(e && p) {
         console.log('True ' + e + ' ' + p);//
         c();
-        /*
-        sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
-        sheet = "Form Responses 1";
-        range = "B2:B";
-        emails = getData(sID,sheet,range,emailCheck);
-        */
     } else {//
         console.log('False ' + e + ' ' + p);//
     }//
@@ -117,8 +116,13 @@ function emailCheck(x) {
             console.log(a);
         }
         if(a.includes($('#eMail').val())) {
-            console.log("Match found - email attached to account");//
-            $('#registerNotice').css('display','block');
+            //get proof of google
+            if($('#pWord').val().includes('.apps.googleusercontent.com')) {
+                sovendeLogin();
+            } else {
+                console.log("Match found - email attached to account");//
+                $('#registerNotice').css('display','block');
+            }
         } else {
             submitForm(f);
             $('#sovendeLogin').find('div:first').trigger('click');
