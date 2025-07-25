@@ -85,7 +85,7 @@ function validateInputs(c) {
     }
     if(e && p) {
         console.log('True ' + e + ' ' + p);//
-        c
+        c();
         /*
         sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
         sheet = "Form Responses 1";
