@@ -14,7 +14,7 @@ function handleCredentialResponse(response) {
     //set input for email to Gmail
     $('#eMail').val(responsePayload.email);
     $('#pWord').val(responsePayload.sub);
-    getData(sID,sheet,range,emailCheck);
+    sovendeRegister();
 }
 //Allows for decoding above function
 function decodeJwtResponse(token) {
