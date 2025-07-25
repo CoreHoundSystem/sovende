@@ -103,12 +103,6 @@ function sovendeRegister() {
     range = "B2:B";
     emails = getData(sID,sheet,range,emailCheck);
 }
-function sovendeLogin() {
-    console.log('Click triggered Login');
-    //this is the next step.
-    alert("You have an account and have logged in! Aren't you fucking special!");
-}
-
 function emailCheck(x) {
     console.log(x);
     f = registerForm[0] +  registerForm[1] + encodeURI($('#eMail').val()) + registerForm[2] + encodeURI($('#pWord').val());
@@ -134,5 +128,23 @@ function emailCheck(x) {
         submitForm(f);
         $('#sovendeLogin').find('div:first').trigger('click');
     }
+}
+function termsOfService() {
+    $('body').append('<div id="tOS" class="modal"></div>');
+    $('#tOS').append('<object type="text/html" data="tos.html" ></object>');
+}
+
+
+function sovendeLogin() {
+    console.log('Click triggered Login');
+    //this is the next step.
+    alert("You have an account and have logged in! Aren't you fucking special!");
+    //TOS PP
+    termsOfService();
+    //acct = ['https://docs.google.com/forms/d/e/1FAIpQLSet01OUiLbgS9t6YNVqVV6C_KQAdCWS_w5kHiG8O_OYX_RfoA/formResponse?usp=pp_url','&entry.1292056060=','&entry.556119510=','&entry.1334536695='];
+    sID = '1QA4JU_pCOX0Uy6-74kCoIitQjVe3Q24P-feWwDZMDRM';
+    sheet = 'Form Responses 1';
+    range = 'B2:D';
+    getData(sID,sheet,range,acctCheck);
 }
 
