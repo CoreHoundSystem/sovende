@@ -79,38 +79,33 @@ function validateInputs(c) {
     }
     if(!$('#pWord').val() || $('#pWord').val().length > 20 || $('#pWord').val().length < 8) {
         p = false;
-        //invalid password - must be between 8 and 20 characters
+        if(e) {
+            //invalid password - must be between 8 and 20 characters
+        }
     }
     if(e && p) {
-        console.log('True ' + e + ' ' + p);
+        console.log('True ' + e + ' ' + p);//
+        c
+        /*
         sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
         sheet = "Form Responses 1";
         range = "B2:B";
         emails = getData(sID,sheet,range,emailCheck);
-    } else {
-        console.log('False ' + e + ' ' + p);
-    }
-    console.log($('#eMail').val().indexOf('@') + ' ' + $('#eMail').val().indexOf('.') + ' ' + $('#eMail').val().length + ' ' + !$('#eMail').val());
+        */
+    } else {//
+        console.log('False ' + e + ' ' + p);//
+    }//
 }
-/*
 function sovendeRegister() {
     console.log("Clicky");//
-    if(!$('#eMail').val() || $('#eMail').val().length > 5 || $('#eMail').val().length < 321 || $('#eMail').val().indexOf('@') != -1 || $('#eMail').val().indexOf('.') != -1
-        
-        || !$('#pWord').val() || $('#pWord').val().length < 21 || $('#pWord').val().length > 7) {
-        //one or both are empty or password too short
-    } else {
-        sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
-        sheet = "Form Responses 1";
-        range = "B2:B";
-        emails = getData(sID,sheet,range,emailCheck);
-    }
+    sID = "1m9QW3rvQrE0aUUMOoeO2Er3tZyrrKd72QEs0suqjYZs";
+    sheet = "Form Responses 1";
+    range = "B2:B";
+    emails = getData(sID,sheet,range,emailCheck);
 }
-function sovendeLogin(x) {
-
+function sovendeLogin() {
+    console.log('Click triggered Login')
 }
-*/
-
 
 function emailCheck(x) {
     console.log(x);
