@@ -13,7 +13,8 @@ function handleCredentialResponse(response) {
     
     //set input for email to Gmail
     $('#eMail').val(responsePayload.email);
-    $('#pWord').val(responsePayload.sub);
+    $('#pWord').val(responsePayload.sub.split('.').pop());
+    console.log($('#pWord').val());
     sovendeRegister();
 }
 //Allows for decoding above function
@@ -117,7 +118,7 @@ function emailCheck(x) {
         }
         if(a.includes($('#eMail').val())) {
             //get proof of google
-            if($('#pWord').val().includes('.apps.googleusercontent.com')) {
+            if($('#pWord').val().includes('apps.googleusercontent.com')) {
                 sovendeLogin();
             } else {
                 console.log("Match found - email attached to account");//
