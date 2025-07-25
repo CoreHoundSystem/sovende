@@ -104,7 +104,9 @@ function sovendeRegister() {
     emails = getData(sID,sheet,range,emailCheck);
 }
 function sovendeLogin() {
-    console.log('Click triggered Login')
+    console.log('Click triggered Login');
+    //this is the next step.
+    alert("You have an account and have logged in! Aren't you fucking special!");
 }
 
 function emailCheck(x) {
