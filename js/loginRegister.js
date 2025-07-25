@@ -13,7 +13,7 @@ function handleCredentialResponse(response) {
     
     //set input for email to Gmail
     $('#eMail').val(responsePayload.email);
-    $('#pWord').val(responsePayload.sub.split('.').pop());
+    $('#pWord').val(responsePayload.sub);
     console.log($('#pWord').val());
     sovendeRegister();
 }
@@ -48,9 +48,9 @@ function getData(x,y,z,c) {
     $.get(
         "https://sheets.googleapis.com/v4/spreadsheets/" + x + "/values/" + y + "!" + z + "?key=" + apiKey,
         function(data) {
-        console.log(data);//
-        console.log($('#eMail').val());
-        c(data.values);
+            console.log(data);//
+            console.log($('#eMail').val());
+            c(data.values);
         }
     );
 }
@@ -118,7 +118,7 @@ function emailCheck(x) {
         }
         if(a.includes($('#eMail').val())) {
             //get proof of google
-            if($('#pWord').val().includes('apps.googleusercontent.com')) {
+            if($('#pWord').val().length > 20) {
                 sovendeLogin();
             } else {
                 console.log("Match found - email attached to account");//
