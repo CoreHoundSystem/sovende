@@ -30,7 +30,7 @@ hr {
   position: fixed;
   bottom: 20px;
   right: 40px;
-  animation: announcements 7s infinite;
+  animation: announcements 3s infinite;
   zoom: 15%;
 }
 @keyframes announcements {
@@ -78,6 +78,9 @@ hr {
   font-weight: 400;
   font-style: normal;
   font-size: medium;
+}
+#userInput input:invalid {
+  color: red;
 }
 #registerNotice, #loginNotice {
   display: none;
