@@ -1,5 +1,5 @@
 function tOSAgree(x) {
-    console.log($(location).search());
+    console.log($(location).attr('search'));
     /*
     emailId = ??; //get from url?
     version = ??; //built in
