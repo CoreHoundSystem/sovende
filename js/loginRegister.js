@@ -105,7 +105,6 @@ function sovendeRegister() {
 }
 function emailCheck(x) {
     console.log(x);
-    f = registerForm[0] +  registerForm[1] + encodeURI($('#eMail').val()) + registerForm[2] + encodeURI($('#pWord').val());
     if(x !== undefined) {
         a = [];
         for(i=0;i<x.length;i++) {
@@ -121,19 +120,29 @@ function emailCheck(x) {
                 $('#registerNotice').css('display','block');
             }
         } else {
-            submitForm(f);
-            $('#sovendeLogin').find('div:first').trigger('click');
+            termsOfService();
         }
     } else {
-        submitForm(f);
-        $('#sovendeLogin').find('div:first').trigger('click');
+        termsOfService();
+        
     }
 }
 function termsOfService() {
+    /*
+        load tos & pp
+            build tos to include accept button - carry version number
+        on accept submit register form and acct form
+    */
     $('body').append('<div id="tOS" class="modal"></div>');
-    $('#tOS').append('<object type="text/html" data="tos.html" ></object>');
+    $('#tOS').append('<object type="text/html" data="tos.html"></object>');
+    //
+    submitForm(f);
+    $('#sovendeLogin').find('div:first').trigger('click');
 }
 
+/*
+f = registerForm[0] +  registerForm[1] + encodeURI($('#eMail').val()) + registerForm[2] + encodeURI($('#pWord').val());
+*/
 
 function sovendeLogin() {
     console.log('Click triggered Login');
@@ -145,6 +154,6 @@ function sovendeLogin() {
     sID = '1QA4JU_pCOX0Uy6-74kCoIitQjVe3Q24P-feWwDZMDRM';
     sheet = 'Form Responses 1';
     range = 'B2:D';
-    getData(sID,sheet,range,acctCheck);
+    //getData(sID,sheet,range,acctCheck);
 }
 
