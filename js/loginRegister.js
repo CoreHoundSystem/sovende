@@ -136,8 +136,8 @@ function termsOfService() {
     $('body').append('<div id="tOS" class="modal"></div>');
     $('#tOS').append('<object type="text/html" data="tos.html"></object>');
     //
-    submitForm(f);
-    $('#sovendeLogin').find('div:first').trigger('click');
+    //submitForm(f);
+    //$('#sovendeLogin').find('div:first').trigger('click');
 }
 
 /*
