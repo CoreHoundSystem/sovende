@@ -131,7 +131,11 @@ hr {
 #sovendeLogin iframe {
   margin: inherit;
 }
-
+#tOS object {
+  height: 100%;
+  width: 100%;
+  
+}
 @media screen and (width <= 600px) {
   body {
     background-size: auto 100%;
