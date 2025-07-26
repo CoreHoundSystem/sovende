@@ -147,7 +147,7 @@ f = registerForm[0] +  registerForm[1] + encodeURI($('#eMail').val()) + register
 function sovendeLogin() {
     console.log('Click triggered Login');
     //this is the next step.
-    alert("You have an account and have logged in! Aren't you fucking special!");
+    //alert("You have an account and have logged in! Aren't you fucking special!");
     //TOS PP
     termsOfService();
     //acct = ['https://docs.google.com/forms/d/e/1FAIpQLSet01OUiLbgS9t6YNVqVV6C_KQAdCWS_w5kHiG8O_OYX_RfoA/formResponse?usp=pp_url','&entry.1292056060=','&entry.556119510=','&entry.1334536695='];
