@@ -134,7 +134,7 @@ function termsOfService() {
         on accept submit register form and acct form
     */
     $('body').append('<div id="tOS" class="modal"></div>');
-    $('#tOS').append('<object type="text/html" data="tos.html"></object>');
+    $('#tOS').append('<object type="text/html" data="tos.html?emailID=1234&acctObj=5678"></object>');
     //
     //submitForm(f);
     //$('#sovendeLogin').find('div:first').trigger('click');
